@@ -8,7 +8,7 @@ bool isPossible(vector<int> cR, int np, int sol)
 
     for (int i = 0; i < cR.size(); i++)
     {
-        int R = cR[i], j = 1;
+        int R = cooksRanks[i], j = 1;
         int timeTaken = 0;
 
         while (true)

@@ -17,7 +17,7 @@ int solve(string a , int start , int end){
 }
 
 int main(){
-    string a = "babad";
+    /string a = "babad";
     int ans = solve(a , 0 , a.size()-1);
     cout << ans << endl;
 }
