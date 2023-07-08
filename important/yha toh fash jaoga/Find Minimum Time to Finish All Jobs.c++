@@ -1,4 +1,4 @@
-class Solution {
+lass Solution {
 public:
 
     void solve(int i , int k , int n , vector<int>& jobs , vector<int>& work , int ans , int &res){

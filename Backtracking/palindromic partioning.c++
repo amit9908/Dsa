@@ -7,7 +7,7 @@ public:
 
        while(i<j){
           char left = str[i];
-          char  right = str[j];
+          char right = str[j];
           if(left != right){
               return false;
           }
