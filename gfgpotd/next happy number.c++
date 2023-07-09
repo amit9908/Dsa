@@ -21,8 +21,6 @@ public:
         }
         if(curr == 7) return 1;
         else return 0;
-        
-        
     }
     int nextHappy(int N){
         // code here
