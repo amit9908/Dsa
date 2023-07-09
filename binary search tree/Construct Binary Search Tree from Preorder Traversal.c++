@@ -17,6 +17,5 @@ public:
         int max = INT_MAX;
         int i = 0;
         return build(i , min , max , preorder);
-        
     }
 };

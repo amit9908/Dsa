@@ -1,4 +1,5 @@
-class Solution
+cl
+ass Solution
 {
 public:
     int countPairs(Node* root1, Node* root2, int x)
