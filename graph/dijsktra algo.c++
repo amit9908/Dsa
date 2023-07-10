@@ -133,7 +133,7 @@ class graph {
 		dist[src] = 0;
 		st.insert(make_pair(0,src));
 
-		while(!st.empty() ) {
+		while(!st.empty()) {
 			//fetch the smallest or first eklement from set
 			auto topElement = *(st.begin());
 			int nodeDistance = topElement.first;

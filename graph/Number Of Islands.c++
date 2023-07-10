@@ -25,7 +25,7 @@ private:
         }
     }
 public:
-    int numIslands(vector<vector<char>>& grid) {
+    int numIslands(vector<vector<char>>& grid){
       map<pair<int,int> , bool> vis;
       int count = 0;
       
