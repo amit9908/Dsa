@@ -19,6 +19,7 @@ return ans;
 
 
 // Modular Exponentiation for large numbers
+// just make sure that every value u take input must be of same type 
 class Solution
 {
 	public:
