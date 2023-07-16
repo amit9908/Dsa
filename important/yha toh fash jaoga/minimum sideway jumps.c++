@@ -1,15 +1,17 @@
-int solve(vector<int> &obstacles)
+class Solution {
+public:
+      int solve(vector<int> &obstacles)
 {
     int n = obstacles.size();
-    vector<vector<int>> dp(4, vector<int>(n, INT_MAX));
-    for (int i = 0; i <= 3; i++)
-    {
-        dp[i][n - 1] = 0;
-    }
+    vector<vector<int>> dp(4, vector<int>(n+1, 1e9));
+    dp[0][n] = 0;
+    dp[1][n] = 0;
+    dp[2][n] = 0;
+    dp[3][n] = 0;
 
-    for (int currLane = 1; currlane <= 3; currlane++)
+    for (int currPos = n - 1; currPos >= 0; currPos--)
     {
-        for (int currPos = n - 1; currPos >= 0; currPos--)
+        for (int currLane = 1 ; currLane <=3 ; currLane++)
         {
 
             int finalAns = 0;
@@ -19,12 +21,12 @@ int solve(vector<int> &obstacles)
             }
             else
             {
-                int ans = INT_MAX;
+                int ans = 1e9;
                 for (int i = 1; i <= 3; i++)
                 {
                     if (i != currLane && obstacles[currPos] != i)
                     {
-                        ans = min(ans, 1 + dp[i][currPos]);
+                        ans = min(ans, 1 + dp[i][currPos+1]);
                     }
                 }
                 finalAns = ans;
@@ -33,7 +35,7 @@ int solve(vector<int> &obstacles)
             dp[currLane][currPos] = finalAns;
         }
     }
-    return dp[2][0];
+    return min(dp[2][0],min(1+dp[1][0] ,1+dp[3][0]));
 }
 
 
@@ -46,5 +48,4 @@ int minSideJumps(vector<int> &obstacles)
     // vector<vector<int>> dp(4, vector<int>(n , -1));
     return solve(obstacles);
 }
-}
-;
+};
