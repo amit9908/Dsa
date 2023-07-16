@@ -46,7 +46,7 @@ public:
         for(auto it:mp) {
 
             if(num >= it.first) {  
-                string a ="";
+                string a = "";
                 if(num >= 100) {
                     a = numberToWords(num / it.first)+ " ";
                 }
