@@ -36,14 +36,13 @@ int main(){
     int precision;
     cin >> precision ;
     double finalans = ans;
-    double step = 0.1;
+    double step = 1;
 
     for(int i =0 ; i<precision ; i++){
+        step /= 10.0;
         for(double j=finalans ; j*j<=n ; j=j+step){
             finalans = j;
         }
-
-        step /= 10.0;
     }
 
     cout <<  finalans << endl;
