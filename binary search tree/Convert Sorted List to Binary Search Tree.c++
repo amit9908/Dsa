@@ -4,7 +4,6 @@ public:
         if (cnt <= 0) return NULL;
         
         TreeNode* leftAns = solve(head, (cnt - 1) / 2);
-        
         TreeNode* root = new TreeNode(head->val);
         root->left = leftAns;
         
