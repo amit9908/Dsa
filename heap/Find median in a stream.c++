@@ -39,8 +39,8 @@ void callMedian(double &median, priority_queue<int>& maxHeap, priority_queue<int
                 case -1: if(element > median) {
                         minHeap.push(element);
                         median = (minHeap.top() + maxHeap.top())/2.0;
-                         }
-                         else {
+                        }
+                        else {
                         int maxTop = maxHeap.top();
                         maxHeap.pop();
                         minHeap.push(maxTop);

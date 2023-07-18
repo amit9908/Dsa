@@ -2,7 +2,7 @@ class Solution
 {
     public:
     //Function to insert heap.
-priority_queue<int>maxheap;
+    priority_queue<int>maxheap;
     priority_queue<int,vector<int>,greater<int>>minheap;
     void insertHeap(int &x)
     {
