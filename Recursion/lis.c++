@@ -30,3 +30,31 @@ int main(){
     int ans = solve(arr , curr , prev , n);
     cout << ans << endl;
 }
+
+
+class Solution {
+public:
+    int rec(vector<int>& nums, int i, int prev, vector<vector<int>>& dp)
+    {
+        if (i >= nums.size())
+            return 0;
+        if (dp[i][prev + 1] != -1)
+            return dp[i][prev + 1];
+        
+        int take = 0;
+        if (prev == -1 || nums[i] > nums[prev]){
+         take = 1 + rec(nums, i + 1, i, dp);
+        }
+
+
+        int notTake = rec(nums, i + 1, prev, dp);
+
+        return dp[i][prev + 1] = max(take, notTake);
+    }
+   
+    int lengthOfLIS(vector<int>& nums) {
+        vector<vector<int>> dp (nums.size() + 1, vector<int> (nums.size() + 1, -1));
+
+        return rec(nums, 0, -1, dp);
+    }
+};
