@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include<unordered_map>
 #include<list>
 #include<queue>
@@ -127,8 +127,8 @@ class graph {
 	}
 
 	void shortestDistDijkstra(int src, int n) {
-		vector<int> dist(n,INT_MAX);
-		set<pair<int,int> > st;
+		vector<int>dist(n,INT_MAX);
+		set<pair<int,int>> st;
 		//intiial steps
 		dist[src] = 0;
 		st.insert(make_pair(0,src));

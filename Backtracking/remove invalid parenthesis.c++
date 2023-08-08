@@ -38,7 +38,7 @@ public:
             string rightStr = s.substr(i+1);
 
             string temp = leftStr + rightStr;
-            solve(temp, removeCnt -1 , ans , m);
+            solve(temp, removeCnt-1 , ans , m);
         }
     }
      

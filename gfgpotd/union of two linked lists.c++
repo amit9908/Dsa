@@ -20,7 +20,7 @@ class Solution
     struct Node* makeUnion(struct Node* head1, struct Node* head2)
     {
         // code here
-         Node* dummy = new Node(0);
+        Node* dummy = new Node(0);
         Node* t = dummy;
         
         map<int,int> m;
@@ -42,6 +42,7 @@ class Solution
             t->next=temp;
             t=t->next;
         }
+        
         Node* head = dummy->next;
         return head;
     }

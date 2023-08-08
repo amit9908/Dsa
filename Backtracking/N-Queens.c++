@@ -77,7 +77,7 @@ public:
 }
 
 
-    void solve(vector<vector<char>> &board, int col, int n, vector<vector<string> > &ans  ) {
+    void solve(vector<vector<char>> &board, int col, int n, vector<vector<string> > &ans ) {
     //base case
     if(col >= n) {
         storeSolution(board, n, ans);
@@ -109,7 +109,7 @@ public:
 
     vector<vector<string>> solveNQueens(int n) {
         vector<vector<char>> board(n, vector<char>(n,'.'));
-        vector<vector<string> > ans;
+        vector<vector<string>> ans;
         int col = 0;
         //0 -> empty cell
         //1 -> Queen at the cell

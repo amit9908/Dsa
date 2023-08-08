@@ -22,7 +22,7 @@ public:
                  int mini=INT_MAX;
                  for(int k=i+1 ; k<j ; k++){
                       mini = min(mini , values[i]*values[k]*values[j] + dp[ i ][k] + dp[k][j]);
-                }
+                    }
 
                  dp[i][j] = mini;
             }

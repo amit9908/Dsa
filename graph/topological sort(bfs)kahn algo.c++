@@ -6,7 +6,7 @@ class Solution
 	{
 	    // code here
 	    vector<int> res;
-	    unordered_map<int, int> indegree;
+	    unordered_map<int , int> indegree;
 	    queue<int> q;
 	    
 	    for(int i=0 ; i<V ; i++){

@@ -12,7 +12,7 @@ public:
            if(currSum == target){
                res.push_back(temp);
                 return;
-           }
+            }
                   
            return;
        }
