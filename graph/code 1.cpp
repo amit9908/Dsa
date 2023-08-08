@@ -329,7 +329,7 @@ class graph {
                 //low update
                 low[src] = min(low[src], low[nbr]);
                 //check for bridge
-                if(low[nbr] > low[src]) {
+                if(low[nbr] > tin[src]) {
                     cout << nbr<<"--"<<src <<" is a bridge" << endl;
                 }
             }
