@@ -17,7 +17,7 @@ void heapify(int arr[], int n, int i) {
 
         if(index != largest) {
                 //left ya right child me se koi > hogya currentNode se
-                swap(arr[index], arr[largest]);
+                swap(arr[index] , arr[largest]);
                 index = largest;
                 heapify(arr, n, index);
         }
@@ -33,7 +33,7 @@ void buildHeap(int arr[], int n) {
 // sorting in ascending order
 void heapSort(int arr[], int n) {
         while(n != 1) {
-                swap(arr[1], arr[n--]);
+                swap(arr[1],arr[n--]);
                 heapify(arr,n,1);
         }
 }

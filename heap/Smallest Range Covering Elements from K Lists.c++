@@ -58,8 +58,6 @@ public:
             }else{
                 break;
             }
-
-            
         }
         vector<int> ans;
         ans.push_back(ansStart);
