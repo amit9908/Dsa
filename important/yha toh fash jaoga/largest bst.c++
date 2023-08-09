@@ -30,10 +30,7 @@ NodeData find(Node* root, int& ans) {
     NodeData right = find(root->right, ans);
 
     NodeData currNode;
-    currNode.size = left.size + 1 + right.size;
-    currNode.maxVal = max(root->data, max(left.maxVal, right.maxVal));
-    currNode.minVal = min(root->data, min(left.minVal, right.minVal));
-
+    currNode.size =  
     if (left.validBST && right.validBST && root->data > left.maxVal && root->data < right.minVal) {
         currNode.validBST = true;
     } else {

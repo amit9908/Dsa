@@ -2,7 +2,7 @@ class Solution {
 public:
     string longestCommonPrefix(vector<string>& strs) {
         string ans;
-        int i=0;
+        int i=0;  
         while(true){
             char curr_ch = 0;
             for(auto str : strs){

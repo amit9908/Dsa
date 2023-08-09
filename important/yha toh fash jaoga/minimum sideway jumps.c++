@@ -49,3 +49,26 @@ int minSideJumps(vector<int> &obstacles)
     return solve(obstacles);
 }
 };
+
+class Solution {
+public:
+    int solve(vector<int>& obs,int currpos,int currLane){
+        int n=obs.size()-1;
+        if(currpos==n)
+        return 0;
+
+        int jump=0;
+        if(obs[currpos+1]!=currLane)
+        return solve(obs,currpos+1,currLane);
+        else
+        {
+            int ans=INT_MAX;
+            for(int i=1;i<=3;i++){
+                if(currLane!=i && obs[currpos]!=i)
+                {
+                    ans=min(ans,1+solve(obs,currpos,i));
+                }   
+            }
+            return ans;
+        }
+    }
