@@ -20,4 +20,4 @@ public:
     string countAndSay(int n) {
         return solve(n);
     }
-};;
+};

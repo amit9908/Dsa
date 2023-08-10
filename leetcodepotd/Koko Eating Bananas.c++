@@ -4,7 +4,7 @@ public:
         int actualHours = 0;
         
         for(int &x : piles){
-            actualHours += x/mid;
+            actualHours += x/mid;0
 
             if((x%mid) != 0){
                 actualHours++;

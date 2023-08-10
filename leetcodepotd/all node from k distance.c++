@@ -53,7 +53,7 @@ public:
     vector<int> distanceK(TreeNode* root, TreeNode* target, int k) {
         unordered_map<TreeNode*, TreeNode*> parent;
 
-         unordered_map<TreeNode*, bool> visited;
+        unordered_map<TreeNode*, bool> visited;
 
         fill_parent(root, parent);
 
