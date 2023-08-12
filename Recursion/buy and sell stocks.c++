@@ -9,8 +9,8 @@ public:
             minPrice = prices[index];
         }
         
-        int todayProfit = prices[index] - minPrice;
-        
+        int todayProfit = prices[index] - minPrice;     
+           
         if (todayProfit > maxiProfit) {
             maxiProfit = todayProfit;
         }

@@ -51,6 +51,25 @@ public:
 
         return dp[i][prev + 1] = max(take, notTake);
     }
+
+    int solve(int n, int arr[]) {
+    vector<vector<int>> dp(n + 1,vector<int>(n + 1, 0));
+
+    for (int curr = n - 1; curr >= 0; curr--) {
+        for (int prev = curr - 1; prev >= -1; prev--) {
+            int pick = 0, notPick = 0;
+
+            if (prev == -1 || arr[curr] > arr[prev]) {
+                pick = 1 + dp[curr + 1][curr + 1];
+            }
+
+            notPick = dp[curr + 1][prev + 1];
+            dp[curr][prev + 1] = max(pick, notPick);
+        }
+    }
+
+    return dp[0][0]; // Return the result using proper indices
+    }
    
     int lengthOfLIS(vector<int>& nums) {
         vector<vector<int>> dp (nums.size() + 1, vector<int> (nums.size() + 1, -1));
