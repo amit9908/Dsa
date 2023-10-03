@@ -5,7 +5,7 @@ public:
         sieve[0] = sieve[1] = false;
 
         for (int i = 2; i * i <= n; i++) {
-            if (sieve[i]) {
+            if(sieve[i]){
                 int j = i * i;
                 while (j < n) {
                     sieve[j] = false;

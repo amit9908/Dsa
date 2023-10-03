@@ -9,7 +9,7 @@ public:
         ans.push_back(1);
         
         for(int i=2 ; i<=N ; i++){
-            for(int j=0 ; j<ans.size() ; j++){
+            for(int j=0 ; j<ans.size() ; j++ ){
                 int x = ans[j]*i+carry;
                 ans[j] = x%10;
                 carry = x/10;

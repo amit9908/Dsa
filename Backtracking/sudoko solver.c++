@@ -33,10 +33,10 @@ public:
                              bool aageKaSolution = solve(board);
                              if(aageKaSolution == true){
                                  return true;
-                            }
+                                }
                              else{
                                  board[row][col] = '.';
-                            }
+                                }
                         }
                     }
 

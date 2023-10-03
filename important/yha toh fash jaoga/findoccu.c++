@@ -8,17 +8,17 @@ int solve(vector<int> arr) {
   int mid = s + (e-s)/2;
 
   while(s <= e) {
-    if(s == e) {
+    if(s == e){
       //single element
       return s;
     }
 
     //2 cases -> mid - even or mid - odd
-    if(mid%2 == 0 ) {
-      if(arr[mid] == arr[mid + 1] ) {
+    if(mid%2 == 0 ){
+      if(arr[mid] == arr[mid + 1]){
         s = mid + 2;
       }
-      else {
+      else{
         e = mid;
       }
     }

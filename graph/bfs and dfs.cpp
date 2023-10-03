@@ -58,7 +58,7 @@ public:
     visited[src] = true;
 
     for(auto neighbour: adjList[src]) {
-      if(!visited[neighbour] ) {
+      if(!visited[neighbour]) {
         dfs(neighbour, visited);
       }
     }

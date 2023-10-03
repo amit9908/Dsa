@@ -11,14 +11,14 @@ public:
                     st.pop();
                 }
 
-                if(st.size() != 0){
+                if(st.sinumber = st.top() + number;
+                   ze() != 0){
                     st.pop();
                 }
                 
                 string number = "";
                 while(st.size() > 0 && st.top() >= '0' && st.top() <= '9'){
-                    number = st.top() + number;
-                    st.pop();
+                     st.pop();
                 }
 
                 int digit_n = stoi(number);

@@ -77,7 +77,7 @@ public:
 }
 
 
-    void solve(vector<vector<char>> &board, int col, int n, vector<vector<string> > &ans ) {
+    void solve(vector<vector<char>> &board, int col, int n, vector<vector<string> > &ans ){
     //base case
     if(col >= n) {
         storeSolution(board, n, ans);

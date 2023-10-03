@@ -9,7 +9,7 @@ public:
 
         if(rOpen > 0){
             temp.push_back('(');
-            solve(temp , cOpen+1 , cClose ,rOpen-1 , rClose ,res);
+            solve(temp , cOpen+1 , cClose , rOpen-1 , rClose ,res);
             temp.pop_back();
         }
 
